@@ -1,3 +1,6 @@
+import { mostrarProductos } from "./puntosAdicionales.js";
+import { filtrarMayorA20 } from "./puntosAdicionales.js";
+
 const productos = [
     { descripcion: "Teclado", precio: 150000.75 },
     { descripcion: "Mouse Inalámbrico", precio: 15000.50 },
@@ -5,3 +8,9 @@ const productos = [
     { descripcion: "Monitor", precio: 115750.25 },
     { descripcion: "Cámara", precio: 90000.45 }
 ]
+
+//mostrar
+mostrarProductos(productos);
+//mostrar mayor a 20000
+console.log("Mayores a 20000");
+filtrarMayorA20(productos);
