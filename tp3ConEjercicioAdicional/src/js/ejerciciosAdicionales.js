@@ -19,3 +19,8 @@ export const precioConIVA = (productos) => {
     }));
     console.log(precioModificadoConIVA);
 }
+//4 - Ordenar el array original de productos por precio de menor a mayor, usando sort.
+export const ordenarPorPrecio = (productos) => {
+    const ordenarMenorAMayor = [...productos].sort((a, b) => a.precio - b.precio);
+    console.log(ordenarMenorAMayor);
+}
