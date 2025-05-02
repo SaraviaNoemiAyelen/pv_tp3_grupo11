@@ -1,35 +1,35 @@
+import React from 'react'
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
 
-function App() {
-  const [count, setCount] = useState(0)
+import TaskItem from './components/TaskItem'
+import TaskInput from './components/TaskInput'
+import TaskList from './components/TaskList'
 
-  return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+function App() {
+  const [tareas, setTareas] = useState([]);
+
+  const agregarTarea = (textoTarea) => {
+    if (textoTarea.trim() !== '') {
+      setTareas([...tareas, { texto: textoTarea, realizada: false }]);
+    }
+  };
+
+  const marcarRealizada = (indice) => {
+    const nuevasTareas = tareas.map((tarea, i) =>
+      i === indice ? { ...tarea, realizada: !tarea.realizada } : tarea
+    );
+    setTareas(nuevasTareas);
+  };
+
+  // Función para eliminar una tarea
+  const eliminarTarea = (indice) => {
+    const nuevasTareas = tareas.filter((_, i) => i !== indice);
+    setTareas(nuevasTareas);
+  };
+
+
+  return ();
 }
 
-export default App
+export default App
