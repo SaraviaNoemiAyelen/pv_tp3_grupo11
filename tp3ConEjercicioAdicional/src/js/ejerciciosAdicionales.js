@@ -5,3 +5,9 @@ export const mostrarProductos = (productos) => {
         console.log(`Producto: ${descripcion} - Precio: $${precio}`)
     })
 }
+
+//2 - Crear un nuevo array con los productos cuyo precio sea mayor a $20, usando filter.
+export const filtrarMayorA20 = (productos) => {
+    const productosMayorA20 = productos.filter(prod => prod.precio > 20000);
+    console.log(productosMayorA20);
+}
