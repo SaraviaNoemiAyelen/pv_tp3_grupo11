@@ -2,6 +2,8 @@ import { mostrarProductos } from "./puntosAdicionales.js";
 import { filtrarMayorA20 } from "./puntosAdicionales.js";
 import { precioConIVA } from "./puntosAdicionales.js";
 import { ordenarPorPrecio } from "./puntosAdicionales.js";
+import { agregarProducto } from "./puntosAdicionales.js";
+import { eliminarProductoPrecioBajo } from "./puntosAdicionales.js";
 const productos = [
     { descripcion: "Teclado", precio: 150000.75 },
     { descripcion: "Mouse Inalámbrico", precio: 15000.50 },
@@ -21,3 +23,9 @@ precioConIVA(productos);
 //mostrar con precio ordenado
 console.log("Precio de Menor a Mayor");
 ordenarPorPrecio(productos);
+//agregar producto
+console.log("Agregar nuevo producto");
+agregarProducto(productos);
+//eliminar producto
+console.log("Eliminar Producto");
+eliminarProductoPrecioBajo(productos);
