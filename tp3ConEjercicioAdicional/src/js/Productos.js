@@ -1,9 +1,10 @@
-import { mostrarProductos } from "./puntosAdicionales.js";
-import { filtrarMayorA20 } from "./puntosAdicionales.js";
-import { precioConIVA } from "./puntosAdicionales.js";
-import { ordenarPorPrecio } from "./puntosAdicionales.js";
-import { agregarProducto } from "./puntosAdicionales.js";
-import { eliminarProductoPrecioBajo } from "./puntosAdicionales.js";
+import { mostrarProductos } from "./ejerciciosAdicionales.js";
+import { filtrarMayorA20 } from "./ejerciciosAdicionales.js";
+import { precioConIVA } from "./ejerciciosAdicionales.js";
+import { ordenarPorPrecio } from "./ejerciciosAdicionales.js";
+import { agregarProducto } from "./ejerciciosAdicionales.js";
+import { eliminarProductoPrecioBajo } from "./ejerciciosAdicionales.js";
+
 const productos = [
     { descripcion: "Teclado", precio: 150000.75 },
     { descripcion: "Mouse Inalámbrico", precio: 15000.50 },
