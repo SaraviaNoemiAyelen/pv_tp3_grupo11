@@ -29,7 +29,17 @@ function App() {
   };
 
 
-  return ();
+  return (
+    <div>
+      <h1>Agregar Tareas</h1>
+      <TaskInput onAgregarTarea={agregarTarea} />
+      <TaskList
+        tareas={tareas}
+        onMarcarRealizada={marcarRealizada}
+        onEliminar={eliminarTarea}
+      />
+    </div>
+  );
 }
 
 export default App
