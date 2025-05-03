@@ -24,3 +24,18 @@ export const ordenarPorPrecio = (productos) => {
     const ordenarMenorAMayor = [...productos].sort((a, b) => a.precio - b.precio);
     console.log(ordenarMenorAMayor);
 }
+
+//5 - Agregar un nuevo producto al final del array (por ejemplo, { descripcion: "Parlante Bluetooth", precio: 59000.90 }).
+export const agregarProducto = (productos) => {
+    const nuevoProducto = { descripcion: "Parlante Bluetooth", precio: 59000.90 };
+    productos.push(nuevoProducto);
+    console.log(productos);
+}
+//6 - Eliminar el producto con el precio más bajo del array. Mostrar cómo queda el array.
+export const eliminarProductoPrecioBajo = (productos) => {
+    productos.sort((a, b) => a.precio - b.precio);
+    const productoMenorPrecio = productos[0];
+    console.log('Producto a eliminar: ${productoMenorPrecio.descripcion} - Precio: $${productoMenorPrecio.precio}')
+    productos.shift();
+    console.log(productos)
+}
